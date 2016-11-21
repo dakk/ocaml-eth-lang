@@ -32,9 +32,9 @@ Methods where the state is not changed:
 (* Contract signature *)
 module TestContract : sig
 	type State
-	let constructor : Contract.t -> Message.t -> State
-	let increment 	: Contract.t -> Message.t -> State -> State
-	let get_counter	: Contract.t -> State -> uint64
+	val constructor : Contract.t -> Message.t -> State
+	val increment 	: Contract.t -> Message.t -> State -> State
+	val get_counter	: Contract.t -> State -> uint64
 end
 
 (* Contract implementation *)
@@ -64,10 +64,10 @@ end
 (* Contract signature *)
 module TestContract2 : sig
 	type State
-	let construct	: Contract.t -> Message.t -> State
-	let deposit		: Contract.t -> Message.t -> State -> State
-	let reedem		: Contract.t -> Message.t -> State -> State
-	let reedem_all	: Contract.t -> Message.t -> State -> State
+	val construct	: Contract.t -> Message.t -> State
+	val deposit		: Contract.t -> Message.t -> State -> State
+	val reedem		: Contract.t -> Message.t -> State -> State
+	val reedem_all	: Contract.t -> Message.t -> State -> State
 end
 	
 module TestContract2 = struct
