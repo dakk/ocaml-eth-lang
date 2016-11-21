@@ -1,3 +1,5 @@
+# ocaml-eth-lang
+
 The proposed language is the ocaml functional language with a custom backend compiler (like bucklescript)
 for compiling directly to eth assembly language.
 	
@@ -24,8 +26,9 @@ Methods where the state is not changed:
 	Contract.t -> State -> 'a
 
 
-```
-(* ***** Exaple 1: simple counter *)
+## Example 1: counter
+
+```ocaml
 (* Contract signature *)
 module TestContract : sig
 	type State
@@ -55,8 +58,9 @@ end
 ```
 
 
-```
-(* ***** Exaple 2: deposit/reedem contract *)
+## Example 2: deposit / reedem contract
+
+```ocaml
 (* Contract signature *)
 module TestContract2 : sig
 	type State
