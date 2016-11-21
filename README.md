@@ -13,17 +13,17 @@ The definition of the State record.
 	
 Constructor: the costructor is a function that returns an initialized State. Its signature is:
 		
-	`Contract.t -> Message.t -> State`
+`Contract.t -> Message.t -> State`
 				
 				
 Contract methods: all contract methods are represented as state change functions; the signature
 is common for each state-change methods:
 			
-	`Contract.t -> Message.t -> State -> State`
+`Contract.t -> Message.t -> State -> State`
 				
 Methods where the state is not changed:
 	
-	`Contract.t -> State -> 'a`
+`Contract.t -> State -> 'a`
 
 
 ## Example 1: counter
